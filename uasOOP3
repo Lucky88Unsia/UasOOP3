@@ -1,0 +1,26 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
+/**
+ *
+ * @author lucky istaqim
+ */
+public class Main {
+    public static void main(String[] args) {
+        Karyawan karyawan1 = new KaryawanTetap("Budi", 30, 5000000);
+        Karyawan karyawan2 = new KaryawanKontrak("Andi", 25, 50000, 100);
+
+        // Menggunakan polimorfisme untuk menghitung gaji
+        printGaji(karyawan1);
+        printGaji(karyawan2);
+    }
+
+    public static void printGaji(Karyawan karyawan) {
+        System.out.println("Nama: " + karyawan.getNama());
+        System.out.println("Umur: " + karyawan.getUmur());
+        System.out.println("Gaji: " + karyawan.hitungGaji());
+    }
+}
+
